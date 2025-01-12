@@ -157,3 +157,66 @@ input:focus, button:hover {
 .hero {
     animation: backgroundAnimation 30s infinite linear;
 }
+/* Neon glowing button */
+.neon-button {
+    padding: 10px 30px;
+    background-color: #1b263b; /* Dark background to contrast with neon */
+    border: 2px solid #00bcd4; /* Neon cyan border */
+    color: #00bcd4;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.neon-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #00bcd4;
+    transition: width 0.5s, height 0.5s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.neon-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.neon-button:hover {
+    color: #fff;
+    border-color: #00ff99; /* Neon green hover effect */
+}
+/* Pulse effect button */
+.pulse-button {
+    padding: 12px 30px;
+    background-color: #00bcd4; /* Neon blue background */
+    border: none;
+    color: #0d1b2a; /* Dark text color for contrast */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pulse-button:hover {
+    transform: scale(1.1); /* Slight scale effect */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); /* Brighter pulse effect */
+}
+
+.pulse-button:active {
+    transform: scale(1.05);
+}
