@@ -14,11 +14,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #1b263b;
+    background-color: rgba(27, 38, 59, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
+    backdrop-filter: blur(10px);
 }
 
 .nav-links {
@@ -46,6 +48,16 @@ body {
     color: #91f291;
 }
 
+/* Ensure links fit properly within navbar */
+.nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nav-links li {
+    white-space: nowrap;
+}
+
 /* Hero section */
 .hero {
     height: 100vh;
@@ -54,6 +66,7 @@ body {
     align-items: center;
     text-align: center;
     background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: #e0e1dd;
 }
 
 .intro h1 {
