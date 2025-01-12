@@ -52,6 +52,7 @@ body {
 .nav-links {
     display: flex;
     flex-wrap: nowrap;
+    overflow-x: auto; /* Prevent links from getting cut off */
 }
 
 .nav-links li {
