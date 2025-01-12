@@ -18,7 +18,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
 }
@@ -52,11 +53,16 @@ body {
 .nav-links {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto; /* Prevent links from getting cut off */
+    margin-right: 2rem;
 }
 
 .nav-links li {
     white-space: nowrap;
+}
+
+/* Fix alignment issue */
+.nav-links li:last-child {
+    margin-right: 0;
 }
 
 /* Hero section */
